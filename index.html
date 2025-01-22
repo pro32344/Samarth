@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="icon" href="https://i.ibb.co/Mndymty/Screenshot-2025-0122-172509.jpg" type="image/jpeg">
+    
+  <title>Music Memories</title>
+  <style>
+    /* General Styles */
+    body {
+      font-family: 'Poppins', Arial, sans-serif;
+      background: linear-gradient(135deg, #1e1e2f, #121212);
+      background-size: 400% 400%;
+      animation: gradientAnimation 10s ease infinite;
+      margin: 0;
+      padding: 0;
+      color: #fff;
+    }
+
+    @keyframes gradientAnimation {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 2.5em;
+      margin: 20px 0;
+      font-weight: bold;
+      color: #1DB954;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 20px;
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(8px);
+      border-radius: 16px;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+    }
+
+    /* Top Picks Carousel */
+    .top-picks {
+      position: relative;
+      margin: 20px auto;
+      max-width: 900px;
+      height: 300px;
+      overflow: hidden;
+      border-radius: 12px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+      perspective: 1000px;
+    }
+
+    .top-picks img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 12px;
+      position: absolute;
+      opacity: 0;
+      transform-origin: center;
+      transition: opacity 1s, transform 0.5s;
+    }
+
+    .top-picks img.active {
+      opacity: 1;
+      transform: scale(1.05);
+    }
+
+    .top-caption {
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+      background: rgba(0, 0, 0, 0.6);
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 8px;
+      font-size: 1.2em;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+      transition: transform 0.5s ease;
+    }
+
+    .top-picks img:hover + .top-caption {
+      transform: translateY(-10px);
+    }
+
+    /* Section Headers */
+    .section-title {
+      font-size: 1.8em;
+      font-weight: bold;
+      margin: 20px 0;
+      color: #ffffff;
+    }
+
+    /* Song Cards */
+    .song-card, .card {
+      background-color: #2b2b3c;
+      border-radius: 12px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+      padding: 20px;
+      margin-bottom: 30px;
+      overflow: hidden;
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+
+    .song-card:hover, .card:hover {
+      transform: translateY(-5px);
+    }
+
+    iframe {
+      width: 100%;
+      height: 80px;
+      border: none;
+      border-radius: 10px;
+    }
+
+    .description {
+      font-size: 1em;
+      color: #b5b5b5;
+      margin-top: 10px;
+    }
+
+    .month-title {
+      font-size: 1.5em;
+      font-weight: bold;
+      margin-bottom: 15px;
+      color: #ffffff;
+    }
+
+    /* Heart-like Text Effect */
+    .heart-text {
+      font-size: 1.5em;
+      font-weight: bold;
+      color: ;
+        padding: 20px;
+      margin-bottom: 30px;
+      text-align: center;
+      position: relative;
+      display: inline-block;
+    }
+
+  
+
+    /* Footer */
+    .footer {
+      text-align: center;
+      padding: 20px;
+      color: #b5b5b5;
+      font-size: 0.8em;
+      margin-top: 40px;
+    }
+
+    /* Add margin between containers */
+    .container + .container {
+      margin-top: 40px;
+    }
+  .year {
+  color: #FF3366; /* Change this to the color you prefer */
+}
+
+
+  </style>
+</head>
+<body>
+
+  <!-- Top Picks Carousel -->
+  <div class="top-picks">
+    <img src="https://via.placeholder.com/900x300?text=Top+Pick+1" alt="Top Pick 1" class="active">
+    <img src="https://via.placeholder.com/900x300?text=Top+Pick+2" alt="Top Pick 2">
+    <img src="https://via.placeholder.com/900x300?text=Top+Pick+3" alt="Top Pick 3">
+    <div class="top-caption">Top Pick 1</div>
+  </div>
+
+  <!-- Song Section -->
+  <div class="container">
+
+    <!-- Current Favorite Song -->
+    <div class="song-card">
+      <h2 class="section-title">Latest crush</h2>
+      <iframe 
+        title="The song I’m loving right now"
+        src="https://open.spotify.com/embed/playlist/0i0qh6meQmt2knKL1fyuqf?si=C6NWjrCGRTSHCiQ6Rwd51g"
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+        loading="lazy">
+      </iframe>
+    </div>
+
+    <!-- Repeat Song -->
+    <div class="song-card">
+      <h2 class="section-title"> Always & Forever</h2>
+      <iframe 
+        title="Repeat Song"
+        src="https://open.spotify.com/embed/playlist/0asP38i9W31kBcQ8xnlhM2?si=R9EVgV4lTiW1clL5mOI-qw"
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+        loading="lazy">
+      </iframe>
+    </div>
+    <div class="song-card">
+      <h2 class="section-title">On Repeat</h2>
+      <iframe 
+        title="Repeat Song"
+        src="https://open.spotify.com/embed/playlist/37i9dQZF1EpxCT1lo7q55y?si=-eoBpm-ERLy9zQ6i_a2ETg&pi=17AZn4IgSBWsL"
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+        loading="lazy">
+      </iframe>
+    </div>
+    <div class="song-card">
+      <h2 class="section-title">Repeat Rewind</h2>
+      <iframe 
+        title="Repeat Song"
+        src="https://open.spotify.com/embed/playlist/37i9dQZF1EpGRLwveO7i92?si=Q8_WBOhyTbmS9MPsHhCwAg"
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+        loading="lazy">
+      </iframe>
+    </div>
+
+  </div>
+
+  <!-- Monthly Memories Section -->
+  <div class="container">
+
+    <!-- Monthly Memories Heading with Heart-like Effect -->
+    <div class="heart-text">
+      Monthly Memories
+    </div>
+
+    <div class="card">
+      <div class="month-title">Jan 2023</div>
+      <iframe 
+        title="Blinding Lights"
+        src="https://open.spotify.com/embed/track/1418IuVKQPTYqt7QNJ9RXN?si=gmceBVSxR4ujA0kDZj8IVg"
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+        loading="lazy">
+      </iframe>
+      <div class="description">
+        New Begining stands out 🥳
+       
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="month-title">Feb 2023</div>
+      <iframe 
+        title="Shape of You"
+        src="https://open.spotify.com/embed/track/5XH02x5CtyL9hBUhXnRHSl?utm_source=oembed"
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+        loading="lazy">
+      </iframe>
+      <div class="description">
+        Free Fire memories stands out
+      </div>
+    </div>
+     <div class="card">
+      <div class="month-title">March 2023</div>
+      <iframe 
+        title="Shape of You"
+        src="https://open.spotify.com/embed/track/0biCSADTAblvLTLtJz4pXO?utm_source=oembed"
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+        loading="lazy">
+      </iframe>
+      <div class="description">
+        9th class memories stands out
+      </div>
+    </div>
+      
+      
+ <div class="card">
+      <div class="month-title">April 2023</div>
+      <iframe 
+        title="Shape of You"
+        src="https://open.spotify.com/embed/track/3khiYRqf3tjb6PSGBhkfl4?utm_source=oembed"
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+        loading="lazy">
+      </iframe>
+      <div class="description">
+        Volleyball memories stands out
+         </div>
+    </div>
+      <div class="card">
+      <div class="month-title">May 2023</div>
+      <iframe 
+        title="Shape of You"
+        src=https://open.spotify.com/embed/track/6n6Btiu2eaR3PaiCKZRj8E?utm_source=oembed""
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+        loading="lazy">
+      </iframe>
+      <div class="description">
+        Duo memories stands out 
+      </div>
+    </div>
+      
+    <div class="card">
+      <div class="month-title">June 2023</div>
+      <iframe 
+        title="Shape of You"
+        src="https://open.spotify.com/embed/track/0F3v8p8ZnEGtZDxNcJ5Klq?utm_source=oembed"
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+        loading="lazy">
+      </iframe>
+      <div class="description">
+        10th starting memories stands out
+      </div>
+    </div>
+      
+    <div class="card">
+      <div class="month-title">July 2023</div>
+      <iframe 
+        title="Shape of You"
+        src="https://open.spotify.com/embed/track/6s3GEN8wK0OMzzzZbXj0fu?utm_source=oembed"
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+        loading="lazy">
+      </iframe>
+      <div class="description">
+       Childhood memories stands out
+      </div>
+    </div>
+      
+    <div class="card">
+      <div class="month-title">Aug 2023</div>
+      <iframe 
+        title="Shape of You"
+        src="https://open.spotify.com/embed/track/46hzNOUOAlivuCZZ0wE3zi?utm_source=oembed"
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+        loading="lazy">
+      </iframe>
+      <div class="description">
+        Tournament memories stands out
+      </div>
+    </div>
+      
+
+      
+    <div class="card">
+      <div class="month-title">Sep 2023</div>
+      <iframe 
+        title="Shape of You"
+        src="https://open.spotify.com/embed/track/1QnVa7XG0zkHKnEGVDpZNm?utm_source=oembed"
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+        loading="lazy">
+      </iframe>
+      <div class="description">
+      Bengaluru memories stands out ❤️
+      </div>
+    </div>
+      
+    <div class="card">
+      <div class="month-title">Oct 2023</div>
+      <iframe 
+        title="Shape of You"
+        src="https://open.spotify.com/embed/track/0biCSADTAblvLTLtJz4pXO?utm_source=oembed"
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+        loading="lazy">
+      </iframe>
+      <div class="description">
+       With  Friends memories stands out ❤️
+          </div>
+    </div>
+      
+    
+      <div class="card">
+      <div class="month-title">Nov 2023</div>
+      <iframe 
+        title="Shape of You"
+        src="https://open.spotify.com/embed/track/2yIW0esEphGtQgVV0w2SYU?utm_source=oembed"
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+        loading="lazy">
+      </iframe>
+      <div class="description">
+       Science Exhibition memories stands out 🥳
+       </div>
+    </div>
+      
+    <div class="card">
+      <div class="month-title">Dec 2023</div>
+      <iframe 
+        title="Shape of You"
+        src="https://open.spotify.com/embed/track/4ymPEyiXabTe1NO8q8EFxG?utm_source=oembed"
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+        loading="lazy">
+      </iframe>
+      <div class="description">
+        Ending Era Stands out 😢
+      </div>
+    </div>
+      
+    <div class="card">
+    <div class="month-title">Jan <span class="year">2024</span></div>
+
+      <iframe 
+        title="Shape of You"
+        src="https://open.spotify.com/embed/track/7BjQqiOJio4RdPL33yALKE?utm_source=oembed"
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+        loading="lazy">
+      </iframe>
+      <div class="description">
+      Classy memories stands out 🥳
+      </div>
+    </div>
+      
+    <div class="card">
+      <div class="month-title">Feb <span class="year">2024</span></div>
+  <iframe 
+        title="Shape of You"
+        src="https://open.spotify.com/embed/track/7JupLCHELRoJiUubOPBPck?utm_source=oembed"
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+        loading="lazy">
+      </iframe>
+      <div class="description">
+        AI launch memories stands out 🥳
+      </div>
+    </div>
+      
+    <div class="card">
+<div class="month-title">March <span class="year">2024</span></div>
+<iframe 
+        title="Shape of You"
+        src="https://open.spotify.com/embed/track/2C6CJGFLbisteRuY6Plb7b?utm_source=oembed"
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+        loading="lazy">
+      </iframe>
+      <div class="description">
+        Studies😁 memories stands out 
+      </div>
+    </div>
+      <div class="card">
+      <div class="month-title">April <span class="year">2024</span></div>
+<iframe 
+        title="Shape of You"
+        src="https://open.spotify.com/embed/track/3TEpHcylaJDZyYOiBVzlwN?utm_source=oembed"
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+        loading="lazy">
+      </iframe>
+      <div class="description">
+        Successfull memories stands out ❤️‍🔥
+      </div>
+    </div>
+      <div class="card">
+      <div class="month-title">May <span class="year">2024</span></div>
+  <iframe 
+        title="Shape of You"
+        src="https://open.spotify.com/embed/track/57jOEZtoLQK4zF2x55bdkp?utm_source=oembed"
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+        loading="lazy">
+      </iframe>
+      <div class="description">
+        Infinite Memories Exist ❤️‍🔥
+        </div>
+    </div>
+      <div class="card">
+      <div class="month-title">June <span class="year">2024</span></div>
+<iframe 
+        title="Shape of You"
+        src="https://open.spotify.com/embed/track/4Kee6zeKBh3T2k3pIP6bpB?utm_source=oembed"
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+        loading="lazy">
+      </iframe>
+      <div class="description">
+        Her Voice stands out ❤️‍🔥
+         </div>
+    </div>
+      
+    
+    <div class="card">
+<div class="month-title">July <span class="year">2024</span></div>
+<iframe 
+        title="Shape of You"
+        src="https://open.spotify.com/embed/track/6fScgF2Y63ScU73nYju0ny?utm_source=oembed"
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+        loading="lazy">
+      </iframe>
+      <div class="description">
+        Science era stands out ❤️‍🔥
+         </div>
+    </div>
+      
+    <div class="card">
+<div class="month-title">Aug <span class="year">2024</span></div>
+<iframe 
+        title="Shape of You"
+        src="https://open.spotify.com/embed/track/1eZ6nPXT1ovpBhVxYKRtaz?utm_source=oembed"
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+        loading="lazy">
+      </iframe>
+      <div class="description">
+        Hostel boys memories exists 💝
+      </div>
+    </div>
+      
+    <div class="card">
+      <div class="month-title">Sep <span class="year">2024</span></div>
+<iframe 
+        title="Shape of You"
+        src="https://open.spotify.com/embed/track/6mSzrW2LLg0U2w163CtKEP?utm_source=oembed"
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+        loading="lazy">
+      </iframe>
+      <div class="description">
+        
+    
+      Advanced in Web and AI memories stands out ❤️‍🔥
+  </div>
+ </div>
+    
+    <div class="card">
+     <div class="month-title">Oct <span class="year">2024</span></div>
+ <iframe 
+        title="Shape of You"
+        src="https://open.spotify.com/embed/track/1kDZSmw3mKQeAjcmPTLS3M?utm_source=oembed"
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+        loading="lazy">
+      </iframe>
+      <div class="description">
+        Again Infinite Memories exist💝 
+      </div>
+    </div>
+      <div class="card">
+<div class="month-title">Nov <span class="year">2024</span></div>
+ <iframe 
+        title="Shape of You"
+        src="https://open.spotify.com/embed/track/4ECtQTEBviknlLrJvUVhRi?utm_source=oembed"
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+        loading="lazy">
+      </iframe>
+      <div class="description">
+        B'day peek 🥳 exist 
+      </div>
+    </div>
+      
+    <div class="card">
+      <div class="month-title">Dec <span class="year">2024</span></div>
+<iframe 
+        title="Shape of You"
+        src="https://open.spotify.com/embed/track/0nqm1P0AJBaQn1mhhloB9j?utm_source=oembed"
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+        loading="lazy">
+      </iframe>
+      <div class="description">
+        Late night memories stands out ❤️‍🔥
+         </div>
+    </div>
+      
+    
+    
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+   Made With ❤️‍🔥 By Samarth
+  </div>
+
+  <script>
+    // Top Picks Slideshow
+    const slides = document.querySelectorAll('.top-picks img');
+    const caption = document.querySelector('.top-caption');
+    const captions = ["Top Pick 1", "Top Pick 2", "Top Pick 3"];
+    let currentIndex = 0;
+
+    function changeSlide() {
+      slides[currentIndex].classList.remove('active');
+
+      currentIndex = (currentIndex + 1) % slides.length;
+      slides[currentIndex].classList.add('active');
+      caption.textContent = captions[currentIndex];
+    }
+
+    setInterval(changeSlide, 3000);
+  </script>
+</body>
+</html>
